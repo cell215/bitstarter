@@ -40,7 +40,7 @@ var assertFileExists = function(infile) {
 
 var assertURLExists = function(inURL) {
     var result;
-    rest.get('http://google.com').on('complete', function(result) {
+    rest.get(inURL).on('complete', function(result) {
 	if (result instanceof Error) {
 	    console.log('Error: ' + result.message);
 	}
